@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Avali+ ícone">
+<rect width="512" height="512" rx="116" fill="#0E0554"/>
+<path d="M104 364 L211 149 Q223 123 246 123 Q269 123 282 149 L377 364" stroke="#FFFFFF" stroke-width="40" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M116 357 Q179 278 246 312 Q285 332 316 357" stroke="#2ECDC4" stroke-width="37" fill="none" stroke-linecap="round"/>
+<path d="M378 135 V207 M342 171 H414" stroke="#2ECDC4" stroke-width="27" stroke-linecap="round"/>
+</svg>

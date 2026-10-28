@@ -414,9 +414,8 @@ function App() {
           <div className="topo-marca topo-marca-inicial">
 
             <img
-              src={logoRius}
-              alt="Logo Rius Soluções e Tecnologia"
-              className="logo-rius logo-rius-inicial"
+              src={`${import.meta.env.BASE_URL}images/logo-avali-plus.svg`}
+               alt="Avali+ — Pesquisa de Satisfação"
             />
 
             <p className="empresa-assinatura">
