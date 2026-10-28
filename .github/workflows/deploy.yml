@@ -36,11 +36,30 @@ jobs:
       - name: Instalar dependencias
         run: npm ci
 
+      
+      - name: Verificar configuracao do Supabase
+        env:
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_PUBLISHABLE_KEY: ${{ secrets.VITE_SUPABASE_PUBLISHABLE_KEY }}
+        run: |
+          if [ -z "$VITE_SUPABASE_URL" ]; then
+            echo "::error::VITE_SUPABASE_URL nao configurada"
+            exit 1
+          fi
+
+          if [ -z "$VITE_SUPABASE_PUBLISHABLE_KEY" ]; then
+            echo "::error::VITE_SUPABASE_PUBLISHABLE_KEY nao configurada"
+            exit 1
+          fi
+
+          echo "Variaveis Supabase encontradas com sucesso"
+
       - name: Compilar aplicacao React
         env:
           VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
           VITE_SUPABASE_PUBLISHABLE_KEY: ${{ secrets.VITE_SUPABASE_PUBLISHABLE_KEY }}
         run: npm run build
+
 
       - name: Configurar GitHub Pages
         uses: actions/configure-pages@v5
