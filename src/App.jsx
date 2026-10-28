@@ -3,11 +3,10 @@ import { supabase } from './lib/supabase'
 
 import './App.css'
 
-import logoRius from './assets/logo-rius.png'
 
 import LoginAdmin from './components/LoginAdmin'
 import Dashboard from './components/Dashboard'
-
+import LogoAvali from './components/LogoAvali'
 
 function App() {
 
@@ -407,50 +406,19 @@ function App() {
         )}
 
 
-        {/* CABEÇALHO INICIAL */}
-
-        {etapa === 0 && (
-
-          <div className="topo-marca topo-marca-inicial">
-
-            <img
-              src={`${import.meta.env.BASE_URL}images/logo-avali-plus.svg`}
-               alt="Avali+ — Pesquisa de Satisfação"
-            />
-
-            <p className="empresa-assinatura">
-
-              Pesquisa realizada por
-
-              <strong>
-                {' '}Rius Soluções e Tecnologia
-              </strong>
-
-            </p>
-
-          </div>
-
-        )}
-
 
         {/* CABEÇALHO DAS PERGUNTAS */}
-
         {etapa >= 1 && (
-
           <div className="topo-marca topo-marca-pesquisa">
-
-            <img
-              src={logoRius}
-              alt="Logo Rius Soluções e Tecnologia"
-              className="logo-rius"
+            <LogoAvali
+              size="small"
+              subtitle="Sua opinião transforma experiências."
             />
 
             <p className="marca-pesquisa">
-              Rius Soluções e Tecnologia
+              Pesquisa de Satisfação
             </p>
-
           </div>
-
         )}
 
 
@@ -497,6 +465,13 @@ function App() {
         {etapa === 0 && (
 
           <div className="hero-pesquisa">
+
+            <div className="logo-inicio">
+              <LogoAvali
+                size="large"
+                subtitle="Sua opinião transforma experiências."
+              />
+            </div>
 
             <span className="badge-pesquisa">
               Pesquisa de satisfação
@@ -756,7 +731,7 @@ function App() {
             <h2>
 
               De 0 a 10, o quanto você recomendaria
-              a Rius Soluções e Tecnologia para outra empresa?
+              nosso atendimento para outra pessoa?
 
             </h2>
 
@@ -1067,8 +1042,8 @@ function App() {
 
 
             <p>
-              Seu feedback é muito importante para
-              a Rius Soluções e Tecnologia.
+              Seu feedback é muito importante e nos ajuda
+              a melhorar continuamente nossos serviços.
             </p>
 
 

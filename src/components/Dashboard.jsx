@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import Chart from 'react-apexcharts'
 
 import { supabase } from '../lib/supabase'
-import logoRius from '../assets/logo-rius.png'
+import LogoAvali from './LogoAvali'
 
 
 function Dashboard({ onSair }) {
@@ -791,8 +791,8 @@ function Dashboard({ onSair }) {
         <div className="dashboard-marca">
 
           <img
-            src={logoRius}
-            alt="Rius Soluções e Tecnologia"
+            src={LogoAvali}
+            alt="Avali+"
             className="dashboard-logo"
           />
 

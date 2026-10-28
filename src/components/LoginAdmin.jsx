@@ -1,7 +1,6 @@
 import { useState } from 'react'
-
+import LogoAvali from './LogoAvali'
 import { supabase } from '../lib/supabase'
-
 
 function LoginAdmin({ onLogin, onVoltar }) {
 
@@ -86,6 +85,10 @@ function LoginAdmin({ onLogin, onVoltar }) {
 
         </button>
 
+        <LogoAvali
+          size="medium"
+          subtitle="Área Administrativa"
+        />
 
         <div className="login-icone">
 
@@ -102,9 +105,7 @@ function LoginAdmin({ onLogin, onVoltar }) {
 
 
         <p className="login-subtitulo">
-
-          Rius Soluções e Tecnologia
-
+          Avali+ | Área Administrativa
         </p>
 
 
