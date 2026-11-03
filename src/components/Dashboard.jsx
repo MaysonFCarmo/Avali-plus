@@ -150,76 +150,76 @@ function Dashboard({ onSair }) {
     intervaloInvalido
       ? []
       : avaliacoes.filter(
-          (avaliacao) => {
+        (avaliacao) => {
 
-            const dataAvaliacao =
-              obterDataLocal(
-                avaliacao.data_avaliacao
-              )
-
-
-            // SEM DATAS -> MÊS ATUAL
-
-            if (
-              !dataInicial &&
-              !dataFinal
-            ) {
-
-              return (
-                dataAvaliacao >= inicioMesAtual &&
-                dataAvaliacao <= fimMesAtual
-              )
-
-            }
+          const dataAvaliacao =
+            obterDataLocal(
+              avaliacao.data_avaliacao
+            )
 
 
-            // SOMENTE DATA INICIAL
+          // SEM DATAS -> MÊS ATUAL
 
-            if (
-              dataInicial &&
-              !dataFinal
-            ) {
+          if (
+            !dataInicial &&
+            !dataFinal
+          ) {
 
-              return (
-                dataAvaliacao >= dataInicial
-              )
-
-            }
-
-
-            // SOMENTE DATA FINAL
-
-            if (
-              !dataInicial &&
-              dataFinal
-            ) {
-
-              return (
-                dataAvaliacao <= dataFinal
-              )
-
-            }
-
-
-            // DATA INICIAL + FINAL
-
-            if (
-              dataInicial &&
-              dataFinal
-            ) {
-
-              return (
-                dataAvaliacao >= dataInicial &&
-                dataAvaliacao <= dataFinal
-              )
-
-            }
-
-
-            return true
+            return (
+              dataAvaliacao >= inicioMesAtual &&
+              dataAvaliacao <= fimMesAtual
+            )
 
           }
-        )
+
+
+          // SOMENTE DATA INICIAL
+
+          if (
+            dataInicial &&
+            !dataFinal
+          ) {
+
+            return (
+              dataAvaliacao >= dataInicial
+            )
+
+          }
+
+
+          // SOMENTE DATA FINAL
+
+          if (
+            !dataInicial &&
+            dataFinal
+          ) {
+
+            return (
+              dataAvaliacao <= dataFinal
+            )
+
+          }
+
+
+          // DATA INICIAL + FINAL
+
+          if (
+            dataInicial &&
+            dataFinal
+          ) {
+
+            return (
+              dataAvaliacao >= dataInicial &&
+              dataAvaliacao <= dataFinal
+            )
+
+          }
+
+
+          return true
+
+        }
+      )
 
 
   function limparFiltros() {
@@ -252,9 +252,9 @@ function Dashboard({ onSair }) {
   const csat =
     totalAvaliacoes > 0
       ? (
-          totalSatisfeitos /
-          totalAvaliacoes
-        ) * 100
+        totalSatisfeitos /
+        totalAvaliacoes
+      ) * 100
       : 0
 
 
@@ -311,27 +311,27 @@ function Dashboard({ onSair }) {
   const percentualPromotores =
     totalAvaliacoes > 0
       ? (
-          promotores /
-          totalAvaliacoes
-        ) * 100
+        promotores /
+        totalAvaliacoes
+      ) * 100
       : 0
 
 
   const percentualNeutros =
     totalAvaliacoes > 0
       ? (
-          neutros /
-          totalAvaliacoes
-        ) * 100
+        neutros /
+        totalAvaliacoes
+      ) * 100
       : 0
 
 
   const percentualDetratores =
     totalAvaliacoes > 0
       ? (
-          detratores /
-          totalAvaliacoes
-        ) * 100
+        detratores /
+        totalAvaliacoes
+      ) * 100
       : 0
 
 
@@ -518,9 +518,9 @@ function Dashboard({ onSair }) {
           const percentual =
             totalAvaliacoes > 0
               ? (
-                  valor /
-                  totalAvaliacoes
-                ) * 100
+                valor /
+                totalAvaliacoes
+              ) * 100
               : 0
 
 
@@ -541,10 +541,10 @@ function Dashboard({ onSair }) {
   const seriesNps =
     totalAvaliacoes > 0
       ? [
-          promotores,
-          neutros,
-          detratores
-        ]
+        promotores,
+        neutros,
+        detratores
+      ]
       : []
 
 
@@ -787,56 +787,34 @@ function Dashboard({ onSair }) {
       {/* CABEÇALHO */}
 
       <header className="dashboard-header">
-
         <div className="dashboard-marca">
-
-          <img
-            src={LogoAvali}
-            alt="Avali+"
-            className="dashboard-logo"
-          />
-
-
-          <div>
-
-            <h1>
-              Dashboard de Experiência do Cliente
-            </h1>
-
-            <p>
-              Rius Soluções e Tecnologia
-            </p>
-
+          <div className="dashboard-logo-container">
+            <LogoAvali size="medium" />
           </div>
 
+          <div className="dashboard-marca-texto">
+            <h1>Dashboard de Experiência do Cliente</h1>
+            <p>Avali+ | Sua opinião transforma experiências.</p>
+          </div>
         </div>
 
-
         <div className="dashboard-acoes">
-
           <button
             type="button"
             className="botao-atualizar"
             onClick={buscarAvaliacoes}
           >
-
             Atualizar
-
           </button>
-
 
           <button
             type="button"
             className="botao-sair"
             onClick={sair}
           >
-
             Sair
-
           </button>
-
         </div>
-
       </header>
 
 
@@ -1127,7 +1105,7 @@ function Dashboard({ onSair }) {
             </strong>
 
             <span className="indicador-descricao">
-              Percepção sobre a Rius
+              Índice de recomendação
             </span>
 
           </article>
